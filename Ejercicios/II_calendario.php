@@ -10,6 +10,7 @@ function bisiesto_query() {
         return 366;
     } else {
         return 365;
+        
     }
 }
 
