@@ -11,12 +11,23 @@ include 'empleado.php';
  *
  * @author maximilianodepietro
  */
-class programador extends empresa{
-   private $lenguaje = 'PHP';   
-   public function setLenguaje($lenguaje){
-       $this->lenguaje=$lenguaje;
+class programador extends empresa
+{
+    private $lenguaje = 'PHP';
+    private $listaLenguajes = array("PHP","NET","python");
+   // REVISAR: private $validarLenguaje = in_array($lenguaje, $listaLenguajes);
+
+   public function setLenguaje($lenguaje)
+   {
+       if (in_array($lenguaje, $listaLenguajes)) {
+           $this->$lenguaje = $lenguaje;
+       } else {
+           return false;
+       }
    }
-   public function getLenguaje(){
-       return $this->lenguaje;
-   }
- }
+
+    public function getLenguaje()
+    {
+        return $this->lenguaje;
+    }
+}

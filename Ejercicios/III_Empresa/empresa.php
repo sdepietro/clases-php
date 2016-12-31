@@ -11,18 +11,19 @@
  *
  * @author maximilianodepietro
  */
-class empresa {
-
+class empresa
+{
     private $id = 0;
     private $nombre = "Nombre";
     private $empleado = 0;
 
-    public function setNombre($nombre) {
+    public function setNombre($nombre)
+    {
         $this->nombre = $nombre;
     }
 
-    public function setEmpleado($empleado) {
+    public function setEmpleado($empleado)
+    {
         $this->empleado = $empleado;
     }
-
 }

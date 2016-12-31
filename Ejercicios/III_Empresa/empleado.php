@@ -11,33 +11,40 @@
  *
  * @author maximilianodepietro
  */
-abstract class empleado {
+abstract class empleado
+{
     protected $id = 0;
     protected $nombre = 'Juan';
     protected $apellido = 'Pelotas';
     protected $edad = 0;
-    
-    public function setNombre($nombre){
+
+    public function setNombre($nombre)
+    {
         $this->nombre=$nombre;
     }
-    public function setApellido($apellido){
+    public function setApellido($apellido)
+    {
         $this->apellido=$apellido;
     }
-    public function setEdad($edad){
+    public function setEdad($edad)
+    {
         $this->edad=$edad;
     }
-    
-    public function getNombre(){
+
+    public function getNombre()
+    {
         return $this->nombre;
     }
-    
-    public function getApellido(){
+
+    public function getApellido()
+    {
         return $this->apellido;
     }
-    
-    public function getedad(){
+
+    public function getedad()
+    {
         return $this->edad;
     }
-    
+
     //put your code here
 }

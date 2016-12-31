@@ -11,14 +11,20 @@ include 'empleado.php';
  *
  * @author maximilianodepietro
  */
-class disenador extends empleado{
+class disenador extends empleado
+{
     private $tipo = 'web';
-    
-    public function setTipo($tipo){
-        $this->tipo=$tipo;
+    private $listaTipos = array('grafico','web');
+    public function setTipo($tipo)
+    {
+        if (in_array($tipo, $listaTipos)) {
+            $this->tipo=$tipo;
+        } else {
+            return false;
+        }
     }
-    
-    public function getTipo(){
+    public function getTipo()
+    {
         return $this->tipo;
     }
 }
