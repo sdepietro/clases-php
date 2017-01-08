@@ -14,16 +14,35 @@
 class empresa
 {
     private $id = 0;
-    private $nombre = "Nombre";
-    private $empleado = 0;
+    private $nombre = "";
+    private $listaEmpleados = array();
+
+    public function __construct($nombre = null)
+    {
+        if (empty($nombre)) {
+            $this->setNombre($nombre);
+        }
+    }
 
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
     }
 
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
     public function setEmpleado($empleado)
     {
-        $this->empleado = $empleado;
+        $empleado->setId(count($this->listaEmpleados) + 1); //devuelve el total de elemntos del array + 1 para que no empiece por 0
+        $this->listaEmpleados[] = $empleado;
     }
+    public function getPromedioEdad(){
+      foreach ($this->listaEmpleados as $value) {
+        # code...
+      }
+    }
+//    public function
 }

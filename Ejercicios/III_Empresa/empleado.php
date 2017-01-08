@@ -1,23 +1,15 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of empleado
- *
- * @author maximilianodepietro
- */
 abstract class empleado
 {
     protected $id = 0;
-    protected $nombre = 'Juan';
-    protected $apellido = 'Pelotas';
+    protected $nombre = '';
+    protected $apellido = '';
     protected $edad = 0;
 
+    public function setId($id)
+    {
+        $this->id=$id;
+    }
     public function setNombre($nombre)
     {
         $this->nombre=$nombre;

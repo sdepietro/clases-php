@@ -1,5 +1,4 @@
 <?php
-include 'empleado.php';
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,9 +14,10 @@ class disenador extends empleado
 {
     private $tipo = 'web';
     private $listaTipos = array('grafico','web');
+    
     public function setTipo($tipo)
     {
-        if (in_array($tipo, $listaTipos)) {
+        if (in_array($tipo, $this->listaTipos)) {
             $this->tipo=$tipo;
         } else {
             return false;

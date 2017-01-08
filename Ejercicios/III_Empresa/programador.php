@@ -1,31 +1,18 @@
 <?php
-include 'empleado.php';
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of programador
- *
- * @author maximilianodepietro
- */
-class programador extends empresa
+class programador extends empleado
 {
-    private $lenguaje = 'PHP';
+    private $lenguaje = '';
     private $listaLenguajes = array("PHP","NET","python");
-   // REVISAR: private $validarLenguaje = in_array($lenguaje, $listaLenguajes);
 
    public function setLenguaje($lenguaje)
    {
-       if (in_array($lenguaje, $listaLenguajes)) {
-           $this->$lenguaje = $lenguaje;
+       if (in_array($lenguaje, $this->listaLenguajes)) {
+           $this->lenguaje = $lenguaje;
+           return true;
        } else {
            return false;
        }
    }
-
     public function getLenguaje()
     {
         return $this->lenguaje;
