@@ -36,7 +36,7 @@ class empresa
 
     public function setEmpleado($empleado)
     {
-        $empleado->setId(count($this->listaEmpleados) + 1); //devuelve el total de elemntos del array + 1 para que no empiece por 0
+        $empleado->setId(count($this->listaEmpleados) + 1); //devuelve el total de elementos del array + 1 para que no empiece por 0
         $this->listaEmpleados[] = $empleado;
     }
     public function getPromedioEdad(){
